@@ -1,5 +1,6 @@
 package com.itranswarp.learnjava;
 
+import com.itranswarp.learnjava.service.User;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
@@ -21,5 +22,8 @@ public class AppConfig {
         userService.login("bob@example.com", "password");
         // UserService class name: UserService$$SpringCGLIB$$0:
         System.out.println(userService.getClass().getName());
+
+        User s = userService.getUser(1);
+        System.out.println(s);
     }
 }
